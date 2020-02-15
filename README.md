@@ -1,1 +1,1 @@
-GameJam2020
+GaneJam2020
