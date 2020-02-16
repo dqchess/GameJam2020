@@ -1,50 +1,55 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Doozy.Engine.UI;
 using UnityEngine.UI;
-using TMPro;
 
 public class PartnerConnectController : MonoBehaviour
 {
     [SerializeField]
-    private UIButton ConnectButton;
+    private Button ConnectButton;
 
     [SerializeField]
-    private UIButton CreatePartnerID;
+    private Button CreatePartnerID;
 
     [SerializeField]
-    private TMP_InputField PartnerIDField;
+    private InputField PartnerIDField;
 
     [SerializeField]
-    private TMP_InputField NewPartnerIDField;
+    private InputField NewPartnerIDField;
 
     [SerializeField]
     private NetworkInitiator networkInitiator;
 
     [SerializeField]
-    private TMPro.TMP_Text OnCreateText;
+    private Text OnCreateText;
 
     [SerializeField]
-    private TMPro.TMP_Text OnConnectText;
+    private Text OnConnectText;
 
-    public UIView view;
+    public GameObject thisView;
+    public GameObject ConnectView;
     // Start is called before the first frame update
     void Start()
     {
-        ConnectButton.OnClick.OnTrigger.SetAction((button) => networkInitiator.ConnectToRoomAsync(PartnerIDField.text, OnConnect));
-        CreatePartnerID.OnClick.OnTrigger.SetAction((button) => networkInitiator.CreateRoomAsync(NewPartnerIDField.text, OnCreate, OnPartnerConnect));
+        ConnectButton.onClick.AddListener(() => networkInitiator.ConnectToRoomAsync(PartnerIDField.text, OnConnect));
+        CreatePartnerID.onClick.AddListener(derp);
+    }
+
+    void derp()
+    {
+        networkInitiator.CreateRoomAsync(NewPartnerIDField.text, OnCreate, OnPartnerConnect);
+
     }
 
     public void OnConnect(bool status, string message)
     {
         if (!status)
         {
-            OnConnectText.SetText(message);
+            OnConnectText.text = (message);
         }
         else
         {
-            view.Hide(false);
+            thisView.SetActive(false);
         }
     }
 
@@ -52,20 +57,25 @@ public class PartnerConnectController : MonoBehaviour
     {
         if (!status)
         {
-            OnCreateText.SetText(message);
+            OnCreateText.text = (message);
         }
         else
         {
-            WaitingViewController cont = UIView.GetViews("General", "Waiting On Player Two")[0].GetComponent<WaitingViewController>();
-            cont.GetComponent<UIView>().Show();
-            cont.Init(networkInitiator.RoomID);
-            UIView.HideView("Connect Window");
+            //WaitingViewController cont = UIView.GetViews("General", "Waiting On Player Two")[0].GetComponent<WaitingViewController>();
+            //cont.GetComponent<UIView>().Show();
+            //cont.Init(networkInitiator.RoomID);
+            //UIView.HideView("Connect Window");
+            thisView.SetActive(false);
+            ConnectView.SetActive(true);
+            //ConnectView.GetComponent<WaitingViewController>().Init(networkInitiator.RoomID);
+            
         }
     }
 
     public void OnPartnerConnect(string playerID)
     {
-        UIView.HideView("General", "Waiting On Player Two");
+        ConnectView.SetActive(false);
+        //UIView.HideView("General", "Waiting On Player Two");
     }
 
 }
