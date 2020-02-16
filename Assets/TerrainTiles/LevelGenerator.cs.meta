@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+<<<<<<< HEAD:Assets/TerrainTiles/LevelGenerator.cs.meta
+guid: d21a5b725aa4d894cb7c23e3f410cfbd
+=======
+guid: e7d8741807a970c4da1c8ad8b54dd759
+>>>>>>> master:Assets/Scripts/Radar.cs.meta
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
