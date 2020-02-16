@@ -5,6 +5,14 @@ TagManager:
   serializedVersion: 2
   tags:
   - Item
+  - air
+  - cave
+  - ice
+  - dirt
+  - grass
+  - lava
+  - storm
+  - water
   layers:
   - Default
   - TransparentFX
