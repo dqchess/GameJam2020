@@ -22,7 +22,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8107473148393243620
 Transform:
   m_ObjectHideFlags: 0
@@ -130,7 +130,37 @@ CompositeCollider2D:
   m_GeometryType: 1
   m_GenerationType: 0
   m_EdgeRadius: 0
-  m_ColliderPaths: []
+  m_ColliderPaths:
+  - m_Collider: {fileID: 1043443675655359881}
+    m_ColliderPaths:
+    - - X: -5000293
+        Y: 0
+      - X: -5000293
+        Y: 10000000
+      - X: -15000000
+        Y: 9999707
+      - X: -14999707
+        Y: 0
+  - m_Collider: {fileID: 5633370394207092317}
+    m_ColliderPaths:
+    - - X: 14999707
+        Y: -10000000
+      - X: 14999707
+        Y: 0
+      - X: -15000000
+        Y: -293
+      - X: -14999707
+        Y: -10000000
+  - m_Collider: {fileID: 9093731780325941204}
+    m_ColliderPaths:
+    - - X: 14999707
+        Y: 0
+      - X: 14999707
+        Y: 10000000
+      - X: 5000000
+        Y: 9999707
+      - X: 5000293
+        Y: 0
   m_CompositePaths:
     m_Paths:
     - - {x: 1.4999415, y: -1}
@@ -249,7 +279,7 @@ PrefabInstance:
     - target: {fileID: 105092744750147245, guid: 2024dade212229a44914d0062b7caab4,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2747467588760047671, guid: 2024dade212229a44914d0062b7caab4,
         type: 3}
@@ -329,7 +359,7 @@ PrefabInstance:
     - target: {fileID: 105092744750147245, guid: 2024dade212229a44914d0062b7caab4,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2747467588760047671, guid: 2024dade212229a44914d0062b7caab4,
         type: 3}
@@ -409,7 +439,7 @@ PrefabInstance:
     - target: {fileID: 105092744750147245, guid: 2024dade212229a44914d0062b7caab4,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2747467588760047671, guid: 2024dade212229a44914d0062b7caab4,
         type: 3}
@@ -489,7 +519,7 @@ PrefabInstance:
     - target: {fileID: 105092744750147245, guid: 2024dade212229a44914d0062b7caab4,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2747467588760047671, guid: 2024dade212229a44914d0062b7caab4,
         type: 3}
@@ -569,7 +599,7 @@ PrefabInstance:
     - target: {fileID: 105092744750147245, guid: 2024dade212229a44914d0062b7caab4,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2747467588760047671, guid: 2024dade212229a44914d0062b7caab4,
         type: 3}

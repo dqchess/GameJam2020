@@ -133,7 +133,6 @@ public class GamePiece : MonoBehaviour
         // Place Piece here
         if(canPlacePiece)
         {
-
             GameObject firstTileObject = children[0];
             Tile firstTile = firstTileObject.GetComponent<Tile>();
 
