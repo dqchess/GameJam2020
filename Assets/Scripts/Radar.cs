@@ -6,33 +6,40 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class Radar : MonoBehaviour
 {
+    private IEnumerator coroutine;
     SphereCollider radarPing;
     public float maxSearchRadius = 100f, searchRate = 0.01f;
-    private bool searching = false;
+    private bool searching = false, found = false;
     Vector3 Direction;
-    GameObject target;
-    Transform mychild;
+    GameObject target, mychild;
 
     // Start is called before the first frame update
     void Start()
     {
         radarPing = GetComponent<SphereCollider>();
         radarPing.radius = 0;
-        mychild =  GetComponentInChildren<Transform>();
+        mychild =  GetComponentInChildren<MeshRenderer>().gameObject;
+        mychild.SetActive(false);
     }
 
      void OnTriggerEnter(Collider collision)
     {
-        Debug.Log("Hit");
+        found = true;
         searching = false;
         transform.position = transform.parent.position;
-        Debug.Log(searching);
         radarPing.radius = 0;
-        Direction = collision.transform.position - this.transform.position;
-        mychild.forward = Direction;
-       
+        target = collision.gameObject;
+        mychild.SetActive(true);
+        mychild.transform.forward = -Direction;
+        StartCoroutine(RemoveRadar()); 
     }
 
+    IEnumerator RemoveRadar()
+    {
+        yield return new WaitForSecondsRealtime(3);
+        mychild.SetActive(false);
+        target = this.gameObject;
+    }
 
     // Update is called once per frame
     void Update()
@@ -40,14 +47,19 @@ public class Radar : MonoBehaviour
         if (Input.GetKeyDown("w") && searching == false)
         {
             searching = true;
+            found = false;
         }
 
         if(searching == true && radarPing.radius < maxSearchRadius)
         {
             radarPing.radius += searchRate * Time.deltaTime;
-        } 
+        }
 
-        
+        if (found)
+        {
+            Direction = target.transform.position - this.transform.position;
+            mychild.transform.forward = -Direction;
+        }
     }
 
 

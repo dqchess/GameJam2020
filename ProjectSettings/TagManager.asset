@@ -13,6 +13,7 @@ TagManager:
   - lava
   - storm
   - water
+  - Sun
   layers:
   - Default
   - TransparentFX

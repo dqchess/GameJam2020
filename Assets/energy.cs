@@ -5,28 +5,42 @@ using UnityEngine;
 public class energy : MonoBehaviour
 {
     public float rechargeRate = 0f;
-    public float energyLevel = 0f;
+    public float energyLevel = 1f;
+    public float maxEnergy = 1000f;
     public float decayRate = 0f;
+    bool full;
 
     void OnTriggerEnter(Collider thing)
     {
         Debug.Log("we got in");
-        if (thing.tag == "RechargeZone") {
+        if (thing.tag == "Sun") {
             setRechargeRate(10f);
         }
     }
 
     void OnTriggerExit(Collider thing)
     {
-        if (thing.tag == "RechargeZone") {
+        if (thing.tag == "Sun") {
             setRechargeRate(0f);
         }
+        full = false;
     }
 
     void Update()
     {
-        energyLevel = energyLevel - decayRate + rechargeRate;
-        Debug.Log(energyLevel);
+        if (!full)
+        {
+            energyLevel = energyLevel - decayRate + rechargeRate;
+            if (energyLevel > maxEnergy)
+            {
+                energyLevel = maxEnergy;
+                full = true;
+            }
+            if (energyLevel < 0)
+            {
+                energyLevel = 1;
+            }
+        }
     }
 
     void setRechargeRate(float newRechargeRate) 
