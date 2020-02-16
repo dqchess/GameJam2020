@@ -63,6 +63,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Abilities\IAbility.cs" />
+    <Compile Include="Assets\Abilities\MovementAbility.cs" />
+    <Compile Include="Assets\Abilities\ObjectManipulation.cs" />
+    <Compile Include="Assets\Abilities\ProofingAbility.cs" />
+    <Compile Include="Assets\Abilities\RadarAbility.cs" />
+    <Compile Include="Assets\Abilities\RechargeAbility.cs" />
     <Compile Include="Assets\Ability.cs" />
     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleAudio.cs" />
     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModulePhysics.cs" />
@@ -339,6 +344,7 @@
     <Compile Include="Assets\Pick.cs" />
     <Compile Include="Assets\Proofing.cs" />
     <Compile Include="Assets\RoboAbilityController.cs" />
+    <Compile Include="Assets\RoboAbilityManager.cs" />
     <Compile Include="Assets\Scripts\Radar.cs" />
     <Compile Include="Assets\Scripts\RandomizeBox.cs" />
     <Compile Include="Assets\Scripts\UIManager.cs" />

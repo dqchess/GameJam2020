@@ -13,6 +13,8 @@ public class Radar : MonoBehaviour
     Vector3 Direction;
     GameObject target, mychild;
 
+    public bool isRadarOn = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -39,12 +41,16 @@ public class Radar : MonoBehaviour
         yield return new WaitForSecondsRealtime(3);
         mychild.SetActive(false);
         target = this.gameObject;
+        this.transform.position = this.GetComponentInParent<Transform>().position;
+        mychild.transform.position = this.GetComponentInParent<Transform>().position;
+        this.transform.localPosition = new Vector3();
+        mychild.transform.localPosition = new Vector3();
     }
 
     // Update is called once per frame
     void Update()
     { 
-        if (Input.GetKeyDown("w") && searching == false)
+        if (isRadarOn && searching == false)
         {
             searching = true;
             found = false;
