@@ -7,7 +7,7 @@ public enum AbilityState {
     Unowned, Available, Active
 }
 
-[CreateAssetMenu(menuName = "Ability")]
+[CreateAssetMenu(fileName="Ability", menuName="Ability")]
 public class Ability : ScriptableObject
 {
     public AbilityState state = Unowned;
