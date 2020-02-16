@@ -10,6 +10,7 @@ public class Proofing : MonoBehaviour
     public bool ColdCollide = true;
     public bool Ascend = false;
     public bool Descend = false;
+    public bool FloatCollide = true;
     public Transform playerTransform;
     // Start is called before the first frame update
     void Start()
@@ -29,6 +30,9 @@ public class Proofing : MonoBehaviour
                 break;
             case "AirCollide":
                 playerTransform.Find("Air").gameObject.SetActive(collide);
+                break;
+            case "FloatCollide":
+                playerTransform.Find("Float").gameObject.SetActive(false);
                 break;
             case "Ascend":
                 playerTransform.Find("Ascend").gameObject.SetActive(!collide);
@@ -70,6 +74,12 @@ public class Proofing : MonoBehaviour
         //    playerTransform.Find("Ascend").gameObject.SetActive(false);
         //} else {
         //    playerTransform.Find("Ascend").gameObject.SetActive(true);
+        //}
+
+        //if (!FloatCollide) {
+        //    playerTransform.Find("Float").gameObject.SetActive(false);
+        //} else {
+        //    playerTransform.Find("Float").gameObject.SetActive(true);
         //}
 
         //if (Descend) {
