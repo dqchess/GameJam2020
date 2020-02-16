@@ -14,8 +14,12 @@ public class NetworkInitiator : MonoBehaviour
     // Start is called before the first frame update
     public string PlayerID;
     public string RoomID;
-    private DatabaseReference dbReference;
+    public string TheOtherPlayerID;
 
+    private DatabaseReference dbReference;
+    private NetworkMessenger networkMessenger;
+
+    public UnityAction<string> OnPlayerTwoConnect;
 
     void Start()
     {
@@ -38,6 +42,8 @@ public class NetworkInitiator : MonoBehaviour
         {
             SetPlayerUniqueID();
         }
+
+        networkMessenger = this.GetComponent<NetworkMessenger>();
     }
 
     string SetPlayerUniqueID()
@@ -47,15 +53,15 @@ public class NetworkInitiator : MonoBehaviour
         return PlayerID;
     }
 
-    public void WriteNewMessage(string messageID, long mesageDateTime, string sentBy, string message)
-    {
+    //public void WriteNewMessage(string messageID, long mesageDateTime, string sentBy, string message)
+    //{
 
-        Message msg = new Message(messageID, mesageDateTime, sentBy, message);
-        string json = JsonUtility.ToJson(msg);
+    //    AbilityMessage msg = new AbilityMessage(messageID, mesageDateTime, sentBy, message);
+    //    string json = JsonUtility.ToJson(msg);
 
-        dbReference.Child("Dummy").Child(messageID).SetRawJsonValueAsync(json);
+    //    dbReference.Child("Dummy").Child(messageID).SetRawJsonValueAsync(json);
 
-    }
+    //}
 
     public async System.Threading.Tasks.Task ConnectToRoomAsync(string roomID, UnityAction<bool, string> callback)
     {
@@ -73,6 +79,10 @@ public class NetworkInitiator : MonoBehaviour
             {
                 foreach (var child in snapshot.Children)
                 {
+                    if(child.Key == "PlayerOneID")
+                    {
+                        TheOtherPlayerID = child.Value.ToString();
+                    }
                     if (child.Key == "PlayerTwoID")
                     {
                         if (child.Value.ToString() == "")
@@ -80,50 +90,73 @@ public class NetworkInitiator : MonoBehaviour
                             await dbReference.Child("Rooms").Child(roomID).Child("PlayerTwoID").SetValueAsync(PlayerID);
                             RoomID = roomID;
                             callback(true, "Connected!");
+                            networkMessenger.Init(dbReference, RoomID, PlayerID, TheOtherPlayerID);
+                            break;
                         }
                         else
                         {
                             callback(false, "Room is full.");
+                            break;
                         }
-                        break;
                     }
+                    
                 }
             }
         }
     }
 
-    public async System.Threading.Tasks.Task CreateRoomAsync(string roomID, UnityAction<bool, string> callback)
+    public async System.Threading.Tasks.Task CreateRoomAsync(string roomID, UnityAction<bool, string> callback, UnityAction<string> onPlayerTwoConnect)
     {
         string json = JsonUtility.ToJson(new Room(roomID, PlayerID, ""));
 
         var initialGetResult = await dbReference.Child("Rooms").Child(roomID).GetValueAsync();
+
         if(initialGetResult.Value == null)
         {
+            this.RoomID = roomID;
             await dbReference.Child("Rooms").Child(roomID).SetRawJsonValueAsync(json);
             callback(true, "Success! Room is created.");
+            
+            this.OnPlayerTwoConnect = onPlayerTwoConnect;
+            dbReference.Child("Rooms").Child(roomID).ValueChanged += HandleRoomValueChanged;
         }
         else
         {
             callback(false, "Room with that ID is already created");
         }
     }
-}
 
-public class Message
-{
-    public string messageID;
-    public string sentBy;
-    public long messageDateTime;
-    public string message;
-
-    public Message(string messageID, long messageDateTime, string sentBy, string message)
+    void HandleRoomValueChanged(object sender, ValueChangedEventArgs args)
     {
-        this.messageID = messageID;
-        this.sentBy = sentBy;
-        this.messageDateTime = messageDateTime;
-        this.message = message;
+        if (args.DatabaseError != null)
+        {
+            Debug.LogError(args.DatabaseError.Message);
+            return;
+        }
+        else
+        {
+            DataSnapshot snapshot = args.Snapshot;
+
+            foreach (var child in snapshot.Children)
+            {
+                if (child.Key == "PlayerTwoID")
+                {
+                    if (child.Value.ToString() != "")
+                    {
+                        Debug.Log("Player 2 Connected");
+                        TheOtherPlayerID = child.Value.ToString();
+                        OnPlayerTwoConnect(child.Value.ToString());
+                        networkMessenger.Init(dbReference, RoomID, PlayerID, TheOtherPlayerID);
+                        break;
+                    }
+                    else
+                        break;
+                }
+            } 
+        }
     }
 }
+
 
 public class Room
 {

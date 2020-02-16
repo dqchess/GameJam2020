@@ -33,7 +33,7 @@ public class PartnerConnectController : MonoBehaviour
     void Start()
     {
         ConnectButton.OnClick.OnTrigger.SetAction((button) => networkInitiator.ConnectToRoomAsync(PartnerIDField.text, OnConnect));
-        CreatePartnerID.OnClick.OnTrigger.SetAction((button) => networkInitiator.CreateRoomAsync(NewPartnerIDField.text, OnCreate));
+        CreatePartnerID.OnClick.OnTrigger.SetAction((button) => networkInitiator.CreateRoomAsync(NewPartnerIDField.text, OnCreate, OnPartnerConnect));
     }
 
     public void OnConnect(bool status, string message)
@@ -56,9 +56,16 @@ public class PartnerConnectController : MonoBehaviour
         }
         else
         {
-            UIView.HideView("Connect Window"); 
+            WaitingViewController cont = UIView.GetViews("General", "Waiting On Player Two")[0].GetComponent<WaitingViewController>();
+            cont.GetComponent<UIView>().Show();
+            cont.Init(networkInitiator.RoomID);
+            UIView.HideView("Connect Window");
         }
     }
 
+    public void OnPartnerConnect(string playerID)
+    {
+        UIView.HideView("General", "Waiting On Player Two");
+    }
 
 }
