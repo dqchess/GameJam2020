@@ -28,6 +28,7 @@ public enum AbilityID
 public struct AbilityReference {
     public AbilityID id;
     public GameObject block;
+    public IAbility iAbility;
 }
 
 [CreateAssetMenu(fileName = "AbilityDatabase", menuName = "BCGJ", order = 1)]
