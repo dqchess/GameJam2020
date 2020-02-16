@@ -77,14 +77,14 @@ public class Pick : MonoBehaviour
         {
 
             Destroy(other.gameObject);
-            
+
         }
 
         if(ableToChopTree && other.tag == "tree")
         {
 
             Destroy(other.gameObject);
-            
+
         }
     }
 
