@@ -14,4 +14,9 @@ public abstract class IAbility : ScriptableObject
     {
 
     }
+
+    public virtual void Deactivate(GameObject obj)
+    {
+        obj.GetComponent<RoboAbilityController>().DeactivateAbility(this);
+    }
 }

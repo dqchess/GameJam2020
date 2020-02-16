@@ -4,51 +4,65 @@ using UnityEngine;
 
 public class Pick : MonoBehaviour
 {
-  bool carrying;
-  public Transform theDest;
+    bool carrying;
+    public Transform theDest;
 
+    bool ableToAcquireAbility;
+    bool ableToGrabandHold;
+    bool ableToChopTree;
+    bool ableToBreakRocks;
+
+    public void UpdatePickAbility()
+    {
+
+    }
     // Start is called before the first frame update
-    void Start()
-    {
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
     private void OnTriggerStay(Collider other){
-      if(other.tag == "item")
-      {
-        if (carrying == false)
+        if(other.tag == "item")
         {
-          if (Input.GetKeyDown("space"))
-          {
-               pickup(other.gameObject);
-              carrying = true;
-          }
-        }
-        else if (carrying == true)
-        {
-           if (Input.GetKeyDown("space"))
-           {
-               putdown(other.gameObject);
-               carrying = false;
-           }
-        }
-      }
+            if (carrying == false)
+            {
+                if (Input.GetKeyDown("space"))
+                {
+                    pickup(other.gameObject);
+                    carrying = true;
+                }
+            }
+            else if (carrying == true)
+            {
+                if (Input.GetKeyDown("space"))
+                {
+                    putdown(other.gameObject);
+                    carrying = false;
+                }
+            }
+         }
     }
 
     private void OnTriggerEnter(Collider other)
     {
 
-      if(other.tag == "ability")
-      {
-        if(carrying == false)
+        if(other.tag == "ability")
         {
-        Destroy(other.gameObject);
-      }
-      }
+            if(carrying == false)
+            {
+                Destroy(other.gameObject);
+            }
+        }
+
+        if (ableToBreakRocks && other.tag == "rock")
+        {
+
+            Destroy(other.gameObject);
+            
+        }
+
+        if(ableToChopTree && other.tag == "tree")
+        {
+
+            Destroy(other.gameObject);
+            
+        }
     }
 
     void pickup(GameObject o)

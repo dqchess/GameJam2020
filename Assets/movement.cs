@@ -20,20 +20,20 @@ public class Movement : MonoBehaviour
     public bool isLeft;
     public bool isRight;
 
-    void ActivateMovementAbility(string type, bool value)
+    public void ActivateMovementAbility(MovementState type, bool value)
     {
         switch (type)
         {
-            case "Forward":
+            case MovementState.Forward:
                 isForward = value;
                 break;
-            case "Backward":
+            case MovementState.Backward:
                 isBackward = value;
                 break;
-            case "Left":
+            case MovementState.Left:
                 isLeft = value;
                 break;
-            case "Right":
+            case MovementState.Right:
                 isRight = value;
                 break;
         }

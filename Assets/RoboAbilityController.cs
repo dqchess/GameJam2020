@@ -10,12 +10,17 @@ public class RoboAbilityController : MonoBehaviour
     public Pick objManipulationController;
 
     // Start is called before the first frame update
-    public void ExecuteAbility(AbilityType type)
+    public void ExecuteAbility(IAbility ability)
     {
         //switch (type)
         //{
         //    case AbilityType.Movement:
         //        movementController.
         //}
+    }
+
+    public void DeactivateAbility(IAbility ability)
+    {
+
     }
 }

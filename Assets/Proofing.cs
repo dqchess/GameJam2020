@@ -30,6 +30,7 @@ public class Proofing : MonoBehaviour
                 break;
             case "AirCollide":
                 playerTransform.Find("Air").gameObject.SetActive(collide);
+                playerTransform.Find("Float").gameObject.SetActive(false);
                 break;
             case "FloatCollide":
                 playerTransform.Find("Float").gameObject.SetActive(false);
