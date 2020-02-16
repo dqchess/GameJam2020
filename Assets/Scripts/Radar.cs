@@ -25,6 +25,7 @@ public class Radar : MonoBehaviour
     {
         Debug.Log("Hit");
         searching = false;
+        transform.position = transform.parent.position;
         Debug.Log(searching);
         radarPing.radius = 0;
         Direction = collision.transform.position - this.transform.position;
