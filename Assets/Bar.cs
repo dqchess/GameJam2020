@@ -16,6 +16,6 @@ public class Bar : MonoBehaviour
     {
 
       slider.value = energy;
-      Debug.Log("slider value=" + slider.value);
+      
     }
 }
