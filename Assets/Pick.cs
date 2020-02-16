@@ -24,7 +24,7 @@ public class Pick : MonoBehaviour
         {
           if (Input.GetKeyDown("space"))
           {
-               pickup(other.gameObject);
+              pickup(other.gameObject);
               carrying = true;
           }
         }
