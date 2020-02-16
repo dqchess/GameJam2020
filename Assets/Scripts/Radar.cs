@@ -13,6 +13,8 @@ public class Radar : MonoBehaviour
     Vector3 Direction;
     GameObject target, mychild;
 
+    public bool isRadarOn = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -48,7 +50,7 @@ public class Radar : MonoBehaviour
     // Update is called once per frame
     void Update()
     { 
-        if (Input.GetKeyDown("w") && searching == false)
+        if (isRadarOn && searching == false)
         {
             searching = true;
             found = false;

@@ -18,26 +18,27 @@ public class Proofing : MonoBehaviour
         playerTransform = GetComponent<Transform>();
     }
 
-    public void ToggleProofing(string type, bool collide)
+    public void ToggleProofing(ProofingType type, bool collide)
     {
         switch (type)
         {
-            case "WetCollide":
+            case ProofingType.Wet:
                 playerTransform.Find("Wet").gameObject.SetActive(collide);
                 break;
-            case "HotCollide":
+            case ProofingType.Hot:
                 playerTransform.Find("Hot").gameObject.SetActive(collide);
                 break;
-            case "AirCollide":
+            case ProofingType.Air:
                 playerTransform.Find("Air").gameObject.SetActive(collide);
+                playerTransform.Find("Float").gameObject.SetActive(collide);
                 break;
-            case "FloatCollide":
-                playerTransform.Find("Float").gameObject.SetActive(false);
+            case ProofingType.Float:
+                playerTransform.Find("Float").gameObject.SetActive(collide);
                 break;
-            case "Ascend":
+            case ProofingType.Ascend:
                 playerTransform.Find("Ascend").gameObject.SetActive(!collide);
                 break;
-            case "Descend":
+            case ProofingType.Descend:
                 playerTransform.Find("Descend").gameObject.SetActive(!collide);
                 break;
         }

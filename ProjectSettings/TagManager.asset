@@ -4,6 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - Piece
+  - GridTile
   - Item
   - air
   - cave
@@ -15,6 +17,8 @@ TagManager:
   - water
   - Sun
   - RechargeZone
+  - tree
+  - rock
   layers:
   - Default
   - TransparentFX
