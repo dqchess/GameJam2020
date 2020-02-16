@@ -50,7 +50,7 @@ public class Radar : MonoBehaviour
     // Update is called once per frame
     void Update()
     { 
-        if (isRadarOn && searching == false)
+        if (isRadarOn && searching == false && Input.GetKeyDown("r"))
         {
             searching = true;
             found = false;
