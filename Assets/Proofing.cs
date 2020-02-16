@@ -10,6 +10,7 @@ public class Proofing : MonoBehaviour
     public bool ColdCollide = true;
     public bool Ascend = false;
     public bool Descend = false;
+    public bool FloatCollide = true;
     public Transform playerTransform;
     // Start is called before the first frame update
     void Start()
@@ -42,6 +43,12 @@ public class Proofing : MonoBehaviour
             playerTransform.Find("Cold").gameObject.SetActive(false);
         } else {
             playerTransform.Find("Cold").gameObject.SetActive(true);
+        }
+
+        if (!FloatCollide) {
+            playerTransform.Find("Float").gameObject.SetActive(false);
+        } else {
+            playerTransform.Find("Float").gameObject.SetActive(true);
         }
 
         if (Ascend) {
