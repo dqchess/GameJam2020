@@ -7,7 +7,7 @@ public enum AbilityState {
     Unowned, Available, Active
 }
 
-[CreateAssetMenu(fileName = "Ability", menuName = "~/dev/GameJam2020/Assets/Ability.cs/Ability", order = 0)]
+[CreateAssetMenu(menuName = "Ability")]
 public class Ability : ScriptableObject
 {
     public AbilityState state = Unowned;
