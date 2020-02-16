@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PackingManager : MonoBehaviour
 {
-    [SerializeField] private Transform BlocksParent;
+    [SerializeField] private Transform BlocksParent = null;
 
     public int cols = 0;
     public int rows = 0;
