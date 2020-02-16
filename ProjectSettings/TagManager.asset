@@ -6,6 +6,17 @@ TagManager:
   tags:
   - Piece
   - GridTile
+  - Item
+  - air
+  - cave
+  - ice
+  - dirt
+  - grass
+  - lava
+  - storm
+  - water
+  - Sun
+  - RechargeZone
   layers:
   - Default
   - TransparentFX
@@ -15,20 +26,20 @@ TagManager:
   - UI
   - 
   - 
+  - Heat
+  - Air
+  - Cold
+  - Wet
+  - Hover
+  - Temp
+  - Ascend
+  - Descend
+  - Float
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Radar
+  - Item
+  - Ability
   - 
   - 
   - 

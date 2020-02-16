@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "303332235359",
+    "firebase_url": "https://bcgj2020p10.firebaseio.com",
+    "project_id": "bcgj2020p10",
+    "storage_bucket": "bcgj2020p10.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:303332235359:android:876e3db6791415497363ea",
+        "android_client_info": {
+          "package_name": "com.bcgj.p10"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "303332235359-b7klo87lmadkas2vrg88928s4kfniv5u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAlRcwF7u1DOvJpo1wcEMKnGdvCT35-LEw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "303332235359-b7klo87lmadkas2vrg88928s4kfniv5u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
