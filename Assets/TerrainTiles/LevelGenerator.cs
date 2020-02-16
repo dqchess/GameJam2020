@@ -23,18 +23,15 @@ public class LevelGenerator : MonoBehaviour
     float currentX;
     float currentZ;
     public TextAsset world;
-    string cReturns = System.Environment.NewLine+ "\n" + "\r";
 
     void Start()
     {
         currentX = xstart;
-        UnityEngine.Debug.Log(world.ToString()[218]);
-        string[] tileTable = world.ToString().Split(cReturns.ToCharArray());
+        string[] tileTable = world.ToString().Split(new[] { System.Environment.NewLine }, System.StringSplitOptions.None);
         foreach (string tileRow in tileTable) 
         {
             currentZ = zstart;
             string[] tiles = tileRow.Split(',');
-            UnityEngine.Debug.Log(tiles.Length);
             foreach (string tile in tiles)
             {
                 switch (tile)
@@ -71,7 +68,6 @@ public class LevelGenerator : MonoBehaviour
                         break;
                     default:
                         Instantiate(dirtTile, new Vector3(currentX, 0, currentZ), Quaternion.identity);
-                        UnityEngine.Debug.Log("Woops");
                         break;
                 }
                 currentZ += 4f;
