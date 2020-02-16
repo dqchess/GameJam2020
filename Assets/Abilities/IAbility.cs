@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum AbilityType { Proofing, Movement, Radar, ObjectManipulation}
+public enum AbilityType { Proofing, Movement, Radar, ObjectManipulation, Recharge}
 public abstract class IAbility : ScriptableObject
 {
     public string id;

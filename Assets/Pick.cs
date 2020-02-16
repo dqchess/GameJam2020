@@ -12,10 +12,25 @@ public class Pick : MonoBehaviour
     bool ableToChopTree;
     bool ableToBreakRocks;
 
-    public void UpdatePickAbility()
+    public void UpdatePickAbility(ManipulationSate state, bool value)
     {
-
+        switch (state)
+        {
+            case ManipulationSate.BreakRock:
+                ableToBreakRocks = value;
+                break;
+            case ManipulationSate.ChopTree:
+                ableToChopTree = value;
+                break;
+            case ManipulationSate.Pickup:
+                ableToAcquireAbility = value;
+                break;
+            case ManipulationSate.PickupAndHold:
+                ableToGrabandHold = value;
+                break;
+        }
     }
+
     // Start is called before the first frame update
     private void OnTriggerStay(Collider other){
         if(other.tag == "item")
@@ -42,9 +57,17 @@ public class Pick : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
 
-        if(other.tag == "ability")
+        if(ableToAcquireAbility && other.tag == "ability")
         {
             if(carrying == false)
+            {
+                Destroy(other.gameObject);
+            }
+        }
+
+        if(ableToGrabandHold && other.tag == "diaper")
+        {
+            if (carrying == false)
             {
                 Destroy(other.gameObject);
             }

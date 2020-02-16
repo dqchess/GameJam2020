@@ -67,6 +67,7 @@
     <Compile Include="Assets\Abilities\ObjectManipulation.cs" />
     <Compile Include="Assets\Abilities\ProofingAbility.cs" />
     <Compile Include="Assets\Abilities\RadarAbility.cs" />
+    <Compile Include="Assets\Abilities\RechargeAbility.cs" />
     <Compile Include="Assets\Ability.cs" />
     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleAudio.cs" />
     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModulePhysics.cs" />
@@ -347,6 +348,7 @@
     <Compile Include="Assets\RoboAbilityManager.cs" />
     <Compile Include="Assets\Scripts\Radar.cs" />
     <Compile Include="Assets\Scripts\RandomizeBox.cs" />
+    <Compile Include="Assets\Scripts\UIManager.cs" />
     <Compile Include="Assets\Sound Effects\LocationSound.cs" />
     <Compile Include="Assets\TerrainTiles\LevelGenerator.cs" />
     <Compile Include="Assets\WaitingViewController.cs" />

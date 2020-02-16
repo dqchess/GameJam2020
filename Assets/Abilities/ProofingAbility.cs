@@ -1,9 +1,12 @@
 ﻿using UnityEngine;
 
+
+public enum ProofingType { Wet, Hot, Cold, Air, Float, Ascend, Descend, BothAscDesc }
+
 [CreateAssetMenu(menuName = "BCGJ/ProofingAbility")]
 class ProofingAbility : IAbility
 {
-    public enum ProofingType { Wet, Hot, Air, Float, Ascend, Descend }
+   
 
     public ProofingType proofingType;
 
