@@ -69,6 +69,8 @@
     <Compile Include="Assets\Abilities\RadarAbility.cs" />
     <Compile Include="Assets\Abilities\RechargeAbility.cs" />
     <Compile Include="Assets\Ability.cs" />
+    <Compile Include="Assets\Attack.cs" />
+    <Compile Include="Assets\Bar.cs" />
     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleAudio.cs" />
     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModulePhysics.cs" />
     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModulePhysics2D.cs" />
@@ -337,6 +339,10 @@
     <Compile Include="Assets\Doozy\Integrations\Playmaker\Actions\Soundy\UnmuteAllSounds.cs" />
     <Compile Include="Assets\Doozy\Integrations\Playmaker\Scripts\PlaymakerEventDispatcher.cs" />
     <Compile Include="Assets\ItemCollector.cs" />
+    <Compile Include="Assets\LineDraw\Scripts\Extensions.cs" />
+    <Compile Include="Assets\LineDraw\Scripts\Line.cs" />
+    <Compile Include="Assets\LineDraw\Scripts\LineFactory.cs" />
+    <Compile Include="Assets\LineDraw\_Demo\LineDemo.cs" />
     <Compile Include="Assets\NetworkInitiator.cs" />
     <Compile Include="Assets\NetworkMessenger.cs" />
     <Compile Include="Assets\NetworkMessengerTest.cs" />
@@ -410,6 +416,7 @@
     <None Include="Assets\Doozy\Examples\Fonts\Permanent_Marker\LICENSE.txt" />
     <None Include="Assets\Firebase\m2repository\com\google\firebase\firebase-auth-unity\maven-metadata.xml" />
     <None Include="Assets\Doozy\Examples\Fonts\Megrim\OFL.txt" />
+    <None Include="Assets\LineDraw\Documentation\Read Me.txt" />
     <None Include="Assets\Doozy\readme.txt" />
     <None Include="Assets\Doozy\Examples\Shaders\DRimLightTransparent.shader" />
     <None Include="Assets\Doozy\Examples\Shaders\DLitSurface.shader" />

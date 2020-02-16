@@ -8,6 +8,7 @@ public class RoboAbilityController : MonoBehaviour
     public Movement movementController;
     public Radar radarController;
     public Pick objManipulationController;
+    
 
     public RoboAbilityManager manager;
 
