@@ -2,32 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Ability : MonoBehaviour
+// Unowned: ability not owned, Available: owned by not activated, Activate: ability is on
+public enum AbilityState {
+    Unowned, Available, Active
+}
+
+[CreateAssetMenu(fileName = "Ability", menuName = "~/dev/GameJam2020/Assets/Ability.cs/Ability", order = 0)]
+public class Ability : ScriptableObject
 {
-    public enum DiamondState {
-        Unowned, Available, Active
-    }
-
-    public Dictionary<string, DiamondState> diamondState = new Dictionary<string, DiamondState>();
-
-    void OnTriggerEnter(Collider areaType)
-    {
-        Debug.Log("we got into " + areaType);
-        // if (areaType.tag == "Wet Tile (5)") {
-        //     setRechargeRate(10f);
-        // }
-    }
-
-    void OnTriggerExit(Collider areaType)
-    {
-        Debug.Log("we LEFT the " + areaType);
-        // if (areaType.tag == "Wet Tile (5)") {
-        //     setRechargeRate(10f);
-        // }
-    }
-
-    // void Update()
-    // {
-    // }
-
+    public AbilityState state = Unowned;
+    public new string name;
+    public string description;
+    public int size;
+    public float volume;
+    public int energyCost;
+    public bool droppable;
+    public string id;
 }
