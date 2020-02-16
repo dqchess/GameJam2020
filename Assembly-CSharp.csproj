@@ -65,6 +65,7 @@
     <Compile Include="Assets\Ability.cs" />
     <Compile Include="Assets\Proofing.cs" />
     <Compile Include="Assets\Scripts\Radar.cs" />
+    <Compile Include="Assets\Scripts\RandomizeBox.cs" />
     <Compile Include="Assets\TerrainTiles\LevelGenerator.cs" />
     <Compile Include="Assets\energy.cs" />
     <Compile Include="Assets\movement.cs" />
