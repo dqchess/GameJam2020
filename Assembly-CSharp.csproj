@@ -313,10 +313,12 @@
      <Compile Include="Assets\Doozy\Integrations\Playmaker\Actions\Soundy\StopAllSounds.cs" />
      <Compile Include="Assets\Doozy\Integrations\Playmaker\Actions\Soundy\UnmuteAllSounds.cs" />
      <Compile Include="Assets\Doozy\Integrations\Playmaker\Scripts\PlaymakerEventDispatcher.cs" />
+     <Compile Include="Assets\ItemCollector.cs" />
      <Compile Include="Assets\NetworkInitiator.cs" />
      <Compile Include="Assets\NetworkMessenger.cs" />
      <Compile Include="Assets\NetworkMessengerTest.cs" />
      <Compile Include="Assets\PartnerConnectController.cs" />
+     <Compile Include="Assets\Pick.cs" />
      <Compile Include="Assets\Proofing.cs" />
      <Compile Include="Assets\Scripts\Radar.cs" />
      <Compile Include="Assets\Scripts\RandomizeBox.cs" />
