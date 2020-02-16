@@ -97,11 +97,9 @@ public class PackingManager : MonoBehaviour
         minBound = (Vector2)gridPosition.position - halfGridOffset;
         maxBound = (Vector2)gridPosition.position + halfGridOffset;
 
-
         Vector3 topLeft = transform.position - new Vector3(halfGridOffset.x, halfGridOffset.y, 0f) + new Vector3(positionOffset.x, positionOffset.y, 0f);
 
-
-        for(int i = 0; i <= rows; i++)
+        for (int i = 0; i <= rows; i++)
         {
             Vector3 a = new Vector3(topLeft.x,  topLeft.y + (i * tileSize), topLeft.z);
 

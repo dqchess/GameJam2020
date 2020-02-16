@@ -69,6 +69,7 @@
     <Compile Include="Assets\Abilities\RadarAbility.cs" />
     <Compile Include="Assets\Abilities\RechargeAbility.cs" />
     <Compile Include="Assets\Ability.cs" />
+    <Compile Include="Assets\Bar.cs" />
     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleAudio.cs" />
     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModulePhysics.cs" />
     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModulePhysics2D.cs" />

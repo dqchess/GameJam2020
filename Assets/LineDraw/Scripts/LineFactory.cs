@@ -21,16 +21,29 @@ public class LineFactory : MonoBehaviour
 	private Line[] pooledLines;
 	private int currentIndex = 0;
 
-	void Start ()
+    private void Awake()
+    {
+        pooledLines = new Line[maxLines];
+
+        for (int i = 0; i < maxLines; i++)
+        {
+            var line = Instantiate(linePrefab);
+            line.SetActive(false);
+            line.transform.SetParent(transform);
+            pooledLines[i] = line.GetComponent<Line>();
+        }
+    }
+
+    void Start ()
 	{
-		pooledLines = new Line[maxLines];
+		//pooledLines = new Line[maxLines];
 		
-		for (int i = 0; i < maxLines; i++) {
-			var line = Instantiate (linePrefab);
-			line.SetActive (false);
-			line.transform.SetParent (transform);
-			pooledLines[i] = line.GetComponent<Line> ();
-		}
+		//for (int i = 0; i < maxLines; i++) {
+		//	var line = Instantiate (linePrefab);
+		//	line.SetActive (false);
+		//	line.transform.SetParent (transform);
+		//	pooledLines[i] = line.GetComponent<Line> ();
+		//}
 	}
 
 	/// <summary>
