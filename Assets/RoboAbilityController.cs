@@ -7,16 +7,15 @@ public class RoboAbilityController : MonoBehaviour
     public Proofing proofingController;
     public Movement movementController;
     public Radar radarController;
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public Pick objManipulationController;
 
-    // Update is called once per frame
-    void Update()
+    // Start is called before the first frame update
+    public void ExecuteAbility(AbilityType type)
     {
-        
+        //switch (type)
+        //{
+        //    case AbilityType.Movement:
+        //        movementController.
+        //}
     }
 }

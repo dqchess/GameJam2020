@@ -14,6 +14,7 @@ TagManager:
   - storm
   - water
   - Sun
+  - RechargeZone
   layers:
   - Default
   - TransparentFX
