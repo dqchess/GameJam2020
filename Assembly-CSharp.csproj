@@ -337,7 +337,6 @@
     <Compile Include="Assets\Doozy\Integrations\Playmaker\Actions\Soundy\UnmuteAllSounds.cs" />
     <Compile Include="Assets\Doozy\Integrations\Playmaker\Scripts\PlaymakerEventDispatcher.cs" />
     <Compile Include="Assets\ItemCollector.cs" />
-    <Compile Include="Assets\Movement.cs" />
     <Compile Include="Assets\NetworkInitiator.cs" />
     <Compile Include="Assets\NetworkMessenger.cs" />
     <Compile Include="Assets\NetworkMessengerTest.cs" />
@@ -353,6 +352,7 @@
     <Compile Include="Assets\TerrainTiles\LevelGenerator.cs" />
     <Compile Include="Assets\WaitingViewController.cs" />
     <Compile Include="Assets\energy.cs" />
+    <Compile Include="Assets\movement.cs" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\Doozy\Examples\Fonts\Codystar\OFL.txt" />
