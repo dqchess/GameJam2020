@@ -140,7 +140,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &157068408
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4021,14 +4021,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52a648b92d92b2c4696fb1ecd8c5cd6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ConnectButton: {fileID: 1687019812}
-  CreatePartnerID: {fileID: 289917402}
-  PartnerIDField: {fileID: 356241630}
-  NewPartnerIDField: {fileID: 676642301}
+  ConnectButton: {fileID: 0}
+  CreatePartnerID: {fileID: 0}
+  PartnerIDField: {fileID: 0}
+  NewPartnerIDField: {fileID: 0}
   networkInitiator: {fileID: 369782037}
-  OnCreateText: {fileID: 2063600562}
-  OnConnectText: {fileID: 693065011}
-  view: {fileID: 872874846}
+  OnCreateText: {fileID: 0}
+  OnConnectText: {fileID: 0}
+  thisView: {fileID: 0}
+  ConnectView: {fileID: 0}
 --- !u!114 &872874844
 MonoBehaviour:
   m_ObjectHideFlags: 0
