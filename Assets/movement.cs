@@ -12,33 +12,19 @@ public class movement : MonoBehaviour
     // public float zForce = 150f;
     // bool onGround = true;
     // public float jumpTime = 1f;
-<<<<<<< HEAD
     public float movespeed = 30f;
     public float RotateSpeed = 60f;
-=======
-    public float movespeed;
-    public float RotateSpeed;
->>>>>>> master
 
     // Start is called before the first frame update
     void Start()
     {
-<<<<<<< HEAD
-=======
-      movespeed = 30f;
-      RotateSpeed = 60f;
->>>>>>> master
 
     }
 
     //Update is called once per frame
     void Update()
     {
-<<<<<<< HEAD
      transform.Translate(Input.GetAxis("Vertical") * Time.deltaTime * movespeed,0f,0f);
-=======
-     transform.Translate(0f,0f,Input.GetAxis("Vertical") * Time.deltaTime * movespeed);
->>>>>>> master
      transform.Rotate(0f,Input.GetAxis("Horizontal") * Time.deltaTime * RotateSpeed,0f);
     }
 

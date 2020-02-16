@@ -55,8 +55,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Ability.cs" />
      <Compile Include="Assets\Proofing.cs" />
+     <Compile Include="Assets\Scripts\Radar.cs" />
      <Compile Include="Assets\TerrainTiles\LevelGenerator.cs" />
+     <Compile Include="Assets\energy.cs" />
      <Compile Include="Assets\movement.cs" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>C:/Users/Public/Documents/GameJam Baby!/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
@@ -261,9 +264,6 @@
  </Reference>
  <Reference Include="UnityEngine.XRModule">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll</HintPath>
- </Reference>
- <Reference Include="Microsoft.VisualBasic">
- <HintPath>C:/Users/Public/Documents/GameJam Baby!/Assets/Plugins/Microsoft.VisualBasic.dll</HintPath>
  </Reference>
  <Reference Include="netstandard">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.1f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
