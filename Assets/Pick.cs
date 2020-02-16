@@ -44,7 +44,10 @@ public class Pick : MonoBehaviour
 
       if(other.tag == "ability")
       {
+        if(carrying == false)
+        {
         Destroy(other.gameObject);
+      }
       }
     }
 
