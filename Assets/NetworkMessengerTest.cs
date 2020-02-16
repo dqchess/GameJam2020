@@ -20,6 +20,6 @@ public class NetworkMessengerTest : MonoBehaviour
 
     private void SendExampleMessage()
     {
-        networkMessenger.SendAbilityMessage("test", "this shit ability sucks" + inc++);
+        networkMessenger.SendAbilityMessage("new", "1");
     }
 }

@@ -17,6 +17,7 @@ public class NetworkMessenger : MonoBehaviour
     private DatabaseReference dbReference;
 
     public UnityAction<AbilityMessage> OnMessageUpdate;
+    public AbilityManager abilityManager;
 
     public void Init(DatabaseReference reference, string roomID, string playerID, string theOtherPlayerID)
     {
@@ -35,6 +36,7 @@ public class NetworkMessenger : MonoBehaviour
     public void SendAbilityMessage(string abilityState, string abilityID)
     {
         AbilityMessage msg = new AbilityMessage(PushingCode, DateTime.Now.Ticks.ToString(), abilityState, abilityID, this.PlayerID);
+        Debug.Log(msg.ToString());
         string jsonifiedMessage = JsonUtility.ToJson(msg);
         this.dbReference.Child("Messages").Child(PushingCode).SetRawJsonValueAsync(jsonifiedMessage);
     }
@@ -42,6 +44,7 @@ public class NetworkMessenger : MonoBehaviour
     public void SetupDBListener()
     {
         this.dbReference.Child("Messages").Child(ListeningCode).ValueChanged += HandleMessageValueChange;
+        //this.dbReference.Child("Messages").Child(PushingCode).ValueChanged += HandleMessageValueChange;
     }
 
     void HandleMessageValueChange(object sender, ValueChangedEventArgs args)
@@ -77,6 +80,8 @@ public class NetworkMessenger : MonoBehaviour
                         break;
                 }
             }
+
+            abilityManager.UpdateAbility(msg);
             Debug.Log(msg.ToString());
         }
     }

@@ -50,6 +50,7 @@ public class PartnerConnectController : MonoBehaviour
         else
         {
             thisView.SetActive(false);
+            ConnectView.SetActive(false);
         }
     }
 

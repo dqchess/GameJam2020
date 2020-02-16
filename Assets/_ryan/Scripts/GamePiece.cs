@@ -32,7 +32,9 @@ public class GamePiece : MonoBehaviour
 
     //public UnityAction onSuccessfulPlace = null;
 
-    public Action<GameObject> OnSuccessfulPlace = null;
+    public Action<GameObject, AbilityID> OnSuccessfulPlace = null;
+
+    public AbilityID abilityID;
 
     private void Awake()
     {
@@ -47,6 +49,7 @@ public class GamePiece : MonoBehaviour
         }
     }
 
+    public bool inUse = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -112,7 +115,7 @@ public class GamePiece : MonoBehaviour
         mouseOffset = mouseWorldPosition - (Vector2) transform.position;
         dragging = true;
 
-        if(placed)
+        if(!inUse && placed)
         {
             foreach (GameObject child in children)
             {
@@ -122,6 +125,7 @@ public class GamePiece : MonoBehaviour
             }
 
             placed = false;
+            packingManager.messenger.SendAbilityMessage("inactive", abilityID.ToString());
         }
     }
 
@@ -181,7 +185,7 @@ public class GamePiece : MonoBehaviour
 
             placed = true;
 
-            OnSuccessfulPlace?.Invoke(this.gameObject);
+            OnSuccessfulPlace?.Invoke(this.gameObject, abilityID);
         }
     }
 
