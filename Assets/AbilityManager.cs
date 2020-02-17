@@ -25,7 +25,12 @@ public class AbilityManager : MonoBehaviour
                 Debug.Log("ACTIVATE: " + msg.ToString());
                 manager.GetAndActivateAbilityByID((AbilityID)(Convert.ToInt32(msg.abilityID)));
             }
-               
+            if (stat == "inactive")
+            {
+                Debug.Log("DEACTIVATE: " + msg.ToString());
+                manager.GetAndDeActivateAbilityByID((AbilityID)(Convert.ToInt32(msg.abilityID)));
+            }
+
 
         }
       

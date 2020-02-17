@@ -17,4 +17,13 @@ public class RoboAbilityManager : MonoBehaviour
 
         return ability;
     }
+
+    public IAbility GetAndDeActivateAbilityByID(AbilityID id)
+    {
+        IAbility ability = Array.Find(abilityDatabase.abilities, x => (x.id == id)).iAbility;
+
+        controller.DeactivateAbility(ability);
+
+        return ability;
+    }
 }

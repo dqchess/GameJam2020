@@ -28,6 +28,7 @@ public class Movement : MonoBehaviour
                 isForward = value;
                 break;
             case MovementState.Backward:
+                Debug.Log(value);
                 isBackward = value;
                 break;
             case MovementState.Left:

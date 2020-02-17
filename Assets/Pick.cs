@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,7 +12,7 @@ public class Pick : MonoBehaviour
     public NetworkMessenger netwrk;
     private string newAbility;
 
-    bool ableToAcquireAbility;
+    bool ableToAcquireAbility = true;
     bool ableToGrabandHold;
     bool ableToChopTree;
     bool ableToBreakRocks;
@@ -41,7 +42,7 @@ public class Pick : MonoBehaviour
         if(ableToAcquireAbility && other.tag == "ability")
         {
             newAbility = other.gameObject.name;
-            netwrk.SendAbilityMessage("new",newAbility);
+            netwrk.SendAbilityMessage("new", newAbility);
             Attack();
             Destroy(other.gameObject);
             // Message Packer

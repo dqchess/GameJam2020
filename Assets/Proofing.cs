@@ -23,23 +23,24 @@ public class Proofing : MonoBehaviour
         switch (type)
         {
             case ProofingType.Wet:
-                playerTransform.Find("Wet").gameObject.SetActive(collide);
+                Debug.Log("WET");
+                playerTransform.Find("Wet").gameObject.SetActive(!collide);
                 break;
             case ProofingType.Hot:
-                playerTransform.Find("Hot").gameObject.SetActive(collide);
+                playerTransform.Find("Hot").gameObject.SetActive(!collide);
                 break;
             case ProofingType.Air:
-                playerTransform.Find("Air").gameObject.SetActive(collide);
-                playerTransform.Find("Float").gameObject.SetActive(collide);
+                playerTransform.Find("Air").gameObject.SetActive(!collide);
+                playerTransform.Find("Float").gameObject.SetActive(!collide);
                 break;
             case ProofingType.Float:
-                playerTransform.Find("Float").gameObject.SetActive(collide);
+                playerTransform.Find("Float").gameObject.SetActive(!collide);
                 break;
             case ProofingType.Ascend:
-                playerTransform.Find("Ascend").gameObject.SetActive(!collide);
+                playerTransform.Find("Ascend").gameObject.SetActive(collide);
                 break;
             case ProofingType.Descend:
-                playerTransform.Find("Descend").gameObject.SetActive(!collide);
+                playerTransform.Find("Descend").gameObject.SetActive(collide);
                 break;
         }
     }
