@@ -36,6 +36,8 @@ public class GamePiece : MonoBehaviour
 
     public AbilityID abilityID;
 
+    public Action<GameObject> OnRemove = null;
+
     private void Awake()
     {
         children = new List<GameObject>();
@@ -126,6 +128,7 @@ public class GamePiece : MonoBehaviour
 
             placed = false;
             packingManager.messenger.SendAbilityMessage("inactive", abilityID.ToString());
+            OnRemove?.Invoke(this.gameObject);
         }
     }
 

@@ -147,6 +147,15 @@ public class PackingManager : MonoBehaviour
         }
     }
 
+    private void OnRemove(GameObject go)
+    {
+        Debug.Log("removed: " + go.name);
+
+        GamePiece piece = go.GetComponent<GamePiece>();
+        AbilityID id = piece.abilityID;
+        messenger.SendAbilityMessage("inactive", ((int)id).ToString());
+    }
+
     private void SpawnRandomAbility()
     {
         int rand = UnityEngine.Random.Range(0, Enum.GetNames(typeof(AbilityID)).Length);
@@ -165,5 +174,6 @@ public class PackingManager : MonoBehaviour
         gamePiece.packingManager = this;
         gamePiece.abilityID = Array.Find(abilityDatabase.abilities, x => (x.id == id)).id;
         gamePiece.OnSuccessfulPlace += OnPlace;
+        gamePiece.OnRemove += OnRemove;
     }
 }
