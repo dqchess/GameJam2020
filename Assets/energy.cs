@@ -8,6 +8,7 @@ public class energy : MonoBehaviour
     public float energyLevel = 1f;
     public float maxEnergy = 1000f;
     public float decayRate = 0f;
+    public Bar bar;
     bool full;
 
     void OnTriggerEnter(Collider thing)
@@ -26,6 +27,12 @@ public class energy : MonoBehaviour
         full = false;
     }
 
+    void Start()
+    {
+      Debug.Log("energy set");
+      bar.SetMaxEnergy(maxEnergy);
+    }
+
     void Update()
     {
         if (!full)
@@ -41,14 +48,15 @@ public class energy : MonoBehaviour
                 energyLevel = 1;
             }
         }
+        bar.SetEnergy(energyLevel);
     }
 
-    void setRechargeRate(float newRechargeRate) 
+    void setRechargeRate(float newRechargeRate)
     {
         rechargeRate = newRechargeRate;
     }
 
-    void setDecayRate(float newDecayRate) 
+    void setDecayRate(float newDecayRate)
     {
         decayRate = newDecayRate;
     }
