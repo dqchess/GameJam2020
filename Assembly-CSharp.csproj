@@ -345,6 +345,7 @@
     <Compile Include="Assets\LineDraw\Scripts\LineFactory.cs" />
     <Compile Include="Assets\LineDraw\_Demo\LineDemo.cs" />
     <Compile Include="Assets\MessageManager.cs" />
+    <Compile Include="Assets\Movement.cs" />
     <Compile Include="Assets\NetworkInitiator.cs" />
     <Compile Include="Assets\NetworkMessenger.cs" />
     <Compile Include="Assets\NetworkMessengerTest.cs" />
@@ -364,7 +365,6 @@
     <Compile Include="Assets\_ryan\Scripts\PackingManager.cs" />
     <Compile Include="Assets\_ryan\Scripts\Tile.cs" />
     <Compile Include="Assets\energy.cs" />
-    <Compile Include="Assets\movement.cs" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\Doozy\Examples\Fonts\Codystar\OFL.txt" />

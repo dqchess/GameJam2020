@@ -1,23 +1,20 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class RoboAbilityManager : MonoBehaviour
 {
     public List<IAbility> abilities = new List<IAbility>();
+    [SerializeField] private AbilityDatabase abilityDatabase = null;
+    public RoboAbilityController controller;
 
-    public IAbility GetAbilityByID(string id)
+    public IAbility GetAndActivateAbilityByID(AbilityID id)
     {
-        IAbility abs = null;
-        foreach(var ability in abilities)
-        {
-            if(ability.id == id)
-            {
-                abs = ability;
-                break;
-            }
-        }
+        IAbility ability = Array.Find(abilityDatabase.abilities, x => (x.id == id)).iAbility;
 
-        return abs;
+        controller.ExecuteAbility(ability);
+
+        return ability;
     }
 }
