@@ -44,3 +44,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pckingManager: {fileID: 0}
+  manager: {fileID: 0}

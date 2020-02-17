@@ -10,9 +10,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <RootNamespace>
-    </RootNamespace>
-    <ProjectGuid>{50D29A90-59B8-2250-9970-F9CAB479D0E7}</ProjectGuid>
+    <RootNamespace></RootNamespace>
+    <ProjectGuid>{E187EA1A-AB3F-58F8-C57A-F748EE85D216}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
