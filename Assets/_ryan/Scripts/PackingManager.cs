@@ -51,6 +51,11 @@ public class PackingManager : MonoBehaviour
     void Start()
     {
         BuildGrid(cols, rows);
+
+        SpawnAbility(AbilityID.Mlef);
+        SpawnAbility(AbilityID.Mrig);
+        SpawnAbility(AbilityID.Mbac);
+        SpawnAbility(AbilityID.Pite);
     }
 
     // Update is called once per frame
@@ -59,6 +64,7 @@ public class PackingManager : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Space))
         {
             SpawnRandomAbility();
+            
         }
     }
 
@@ -113,9 +119,6 @@ public class PackingManager : MonoBehaviour
 
             lineFactory.GetLine(a, a + (Vector3.up * totalHeight), lineWidth, gridColor);
         }
-
-        
-
 
     }
 
