@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Doozy.Engine.UI;
+using UnityEngine.UI;
 
 public class NetworkMessengerTest : MonoBehaviour
 {
@@ -9,13 +9,13 @@ public class NetworkMessengerTest : MonoBehaviour
     private NetworkMessenger networkMessenger;
 
     [SerializeField]
-    private UIButton button;
+    private Button button;
 
     private int inc = 0;
 
     private void Start()
     {
-        button.OnClick.OnTrigger.SetAction((button) => SendExampleMessage());
+        button.onClick.AddListener(() => SendExampleMessage());
     }
 
     private void SendExampleMessage()

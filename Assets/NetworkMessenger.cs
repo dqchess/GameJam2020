@@ -5,7 +5,6 @@ using Firebase;
 using Firebase.Database;
 using Firebase.Unity.Editor;
 using System;
-using Doozy.Engine.UI;
 using UnityEngine.UI;
 using UnityEngine.Events;
 

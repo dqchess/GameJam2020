@@ -3768,7 +3768,6 @@ MonoBehaviour:
     PresetName: 
   TargetLabel: 1
   TextLabel: {fileID: 950853813}
-  TextMeshProLabel: {fileID: 0}
 --- !u!114 &399087208
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8075,7 +8074,6 @@ MonoBehaviour:
     PresetName: 
   TargetLabel: 1
   TextLabel: {fileID: 364184945}
-  TextMeshProLabel: {fileID: 0}
 --- !u!114 &1347490034
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10725,7 +10723,6 @@ MonoBehaviour:
     PresetName: 
   TargetLabel: 2
   TextLabel: {fileID: 0}
-  TextMeshProLabel: {fileID: 630100326}
 --- !u!114 &1779986237
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -33,6 +33,7 @@ public class GamePiece : MonoBehaviour
     //public UnityAction onSuccessfulPlace = null;
 
     public Action<GameObject> OnSuccessfulPlace = null;
+    public Action<GameObject> OnRemove = null;
 
     private void Awake()
     {
@@ -122,6 +123,7 @@ public class GamePiece : MonoBehaviour
             }
 
             placed = false;
+            OnRemove?.Invoke(this.gameObject);
         }
     }
 
