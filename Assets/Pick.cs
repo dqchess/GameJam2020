@@ -8,6 +8,9 @@ public class Pick : MonoBehaviour
     bool carrying;
     private Transform theDest;
 
+    public NetworkMessenger netwrk;
+    private string newAbility;
+
     bool ableToAcquireAbility;
     bool ableToGrabandHold;
     bool ableToChopTree;
@@ -37,6 +40,8 @@ public class Pick : MonoBehaviour
 
         if(ableToAcquireAbility && other.tag == "ability")
         {
+            newAbility = other.gameObject.name;
+            netwrk.SendAbilityMessage("new",newAbility);
             Attack();
             Destroy(other.gameObject);
             // Message Packer
