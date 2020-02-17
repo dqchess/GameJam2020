@@ -1097,6 +1097,71 @@ PrefabInstance:
       propertyPath: m_Name
       value: Abilities
       objectReference: {fileID: 0}
+    - target: {fileID: 3831054843689457607, guid: 5b3c6bae9dc571a459b0c4804f36da96,
+        type: 3}
+      propertyPath: m_TagString
+      value: ability
+      objectReference: {fileID: 0}
+    - target: {fileID: 3831054843689457607, guid: 5b3c6bae9dc571a459b0c4804f36da96,
+        type: 3}
+      propertyPath: m_Name
+      value: Ewat
+      objectReference: {fileID: 0}
+    - target: {fileID: 8893835074881435787, guid: 5b3c6bae9dc571a459b0c4804f36da96,
+        type: 3}
+      propertyPath: m_Name
+      value: Ehot
+      objectReference: {fileID: 0}
+    - target: {fileID: 8893835075214418001, guid: 5b3c6bae9dc571a459b0c4804f36da96,
+        type: 3}
+      propertyPath: m_Name
+      value: Itre
+      objectReference: {fileID: 0}
+    - target: {fileID: 8893835075367768287, guid: 5b3c6bae9dc571a459b0c4804f36da96,
+        type: 3}
+      propertyPath: m_Name
+      value: Cdec
+      objectReference: {fileID: 0}
+    - target: {fileID: 8893835075392710263, guid: 5b3c6bae9dc571a459b0c4804f36da96,
+        type: 3}
+      propertyPath: m_Name
+      value: Ehov
+      objectReference: {fileID: 0}
+    - target: {fileID: 8893835075514610036, guid: 5b3c6bae9dc571a459b0c4804f36da96,
+        type: 3}
+      propertyPath: m_Name
+      value: Iroc
+      objectReference: {fileID: 0}
+    - target: {fileID: 8893835075917724333, guid: 5b3c6bae9dc571a459b0c4804f36da96,
+        type: 3}
+      propertyPath: m_Name
+      value: Ecol
+      objectReference: {fileID: 0}
+    - target: {fileID: 8893835076024186340, guid: 5b3c6bae9dc571a459b0c4804f36da96,
+        type: 3}
+      propertyPath: m_Name
+      value: Eflo
+      objectReference: {fileID: 0}
+    - target: {fileID: 8893835076150184365, guid: 5b3c6bae9dc571a459b0c4804f36da96,
+        type: 3}
+      propertyPath: m_Name
+      value: Rada
+      objectReference: {fileID: 0}
+    - target: {fileID: 8893835076361763090, guid: 5b3c6bae9dc571a459b0c4804f36da96,
+        type: 3}
+      propertyPath: m_Name
+      value: Casc
+      objectReference: {fileID: 0}
+    - target: {fileID: 8893835076384086044, guid: 5b3c6bae9dc571a459b0c4804f36da96,
+        type: 3}
+      propertyPath: m_Name
+      value: Call
+      objectReference: {fileID: 0}
+    - target: {fileID: 8893835076555592325, guid: 5b3c6bae9dc571a459b0c4804f36da96,
+        type: 3}
+      propertyPath: m_Name
+      value: Fusi
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b3c6bae9dc571a459b0c4804f36da96, type: 3}
 --- !u!4 &1130146584 stripped
