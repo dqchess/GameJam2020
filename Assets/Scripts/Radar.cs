@@ -6,6 +6,7 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class Radar : MonoBehaviour
 {
+    public energy generator;
     private IEnumerator coroutine;
     SphereCollider radarPing;
     public float maxSearchRadius = 100f, searchRate = 0.01f;
@@ -52,8 +53,11 @@ public class Radar : MonoBehaviour
     { 
         if (isRadarOn && searching == false && Input.GetKeyDown("r"))
         {
-            searching = true;
-            found = false;
+            if (generator.Radar())
+            {
+                searching = true;
+                found = false;
+            }
         }
 
         if(searching == true && radarPing.radius < maxSearchRadius)

@@ -8,6 +8,7 @@ public class energy : MonoBehaviour
     public float energyLevel = 1f;
     public float maxEnergy = 1000f;
     public float decayRate = 0f;
+    public float radarPower = 60f;
     public Bar bar;
     bool full;
 
@@ -56,8 +57,21 @@ public class energy : MonoBehaviour
         rechargeRate = newRechargeRate;
     }
 
-    void setDecayRate(float newDecayRate)
+    public void setDecayRate(float newDecayRate)
     {
         decayRate = newDecayRate;
+    }
+
+    public bool Radar()
+    {
+        if(energyLevel < radarPower)
+        {
+            return false;
+        }
+        else
+        {
+            energyLevel -= radarPower;
+            return true;
+        }
     }
 }
