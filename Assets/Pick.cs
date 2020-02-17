@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class Pick : MonoBehaviour
 {
+    [SerializeField] Animator animator;
     bool carrying;
-    public Transform theDest;
+    private Transform theDest;
 
     bool ableToAcquireAbility;
     bool ableToGrabandHold;
@@ -36,27 +37,38 @@ public class Pick : MonoBehaviour
 
         if(ableToAcquireAbility && other.tag == "ability")
         {
+            Attack();
             Destroy(other.gameObject);
             // Message Packer
         }
 
         if(ableToGrabandHold && other.tag == "item")
         {
+            Attack();
             Destroy(other.gameObject);
             // Update GUI
         }
 
         if (ableToBreakRocks && other.tag == "rock")
         {
+            Attack();
             Destroy(other.gameObject);
         }
 
         if(ableToChopTree && other.tag == "tree")
         {
+            Attack();
             Destroy(other.gameObject);
         }
 
         
+
+        
+    }
+
+    void Attack()
+    {
+        animator.SetTrigger("Attack");
     }
 
 }
