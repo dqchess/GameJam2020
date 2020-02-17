@@ -1703,6 +1703,41 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1699762880520973328, guid: f73b868874784d94c99bca5a7c18f769,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 43
+      objectReference: {fileID: 0}
+    - target: {fileID: 1699762880520973328, guid: f73b868874784d94c99bca5a7c18f769,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -261
+      objectReference: {fileID: 0}
+    - target: {fileID: 1699762880520973329, guid: f73b868874784d94c99bca5a7c18f769,
+        type: 3}
+      propertyPath: m_Text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1699762880571434501, guid: f73b868874784d94c99bca5a7c18f769,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 40.580048
+      objectReference: {fileID: 0}
+    - target: {fileID: 1699762880571434501, guid: f73b868874784d94c99bca5a7c18f769,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -212
+      objectReference: {fileID: 0}
+    - target: {fileID: 1699762880648666989, guid: f73b868874784d94c99bca5a7c18f769,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 576.5801
+      objectReference: {fileID: 0}
+    - target: {fileID: 1699762880648666989, guid: f73b868874784d94c99bca5a7c18f769,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -212
+      objectReference: {fileID: 0}
     - target: {fileID: 1699762880891884157, guid: f73b868874784d94c99bca5a7c18f769,
         type: 3}
       propertyPath: networkMessenger
@@ -1822,6 +1857,62 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Canvas (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1699762881753422930, guid: f73b868874784d94c99bca5a7c18f769,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f3c82d4d77c2ef643b324e1c6280f991,
+        type: 3}
+    - target: {fileID: 1699762881753422930, guid: f73b868874784d94c99bca5a7c18f769,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1699762881753422930, guid: f73b868874784d94c99bca5a7c18f769,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1699762881753422930, guid: f73b868874784d94c99bca5a7c18f769,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1699762882022902972, guid: f73b868874784d94c99bca5a7c18f769,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 579.00006
+      objectReference: {fileID: 0}
+    - target: {fileID: 1699762882022902972, guid: f73b868874784d94c99bca5a7c18f769,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -261
+      objectReference: {fileID: 0}
+    - target: {fileID: 1699762882022902973, guid: f73b868874784d94c99bca5a7c18f769,
+        type: 3}
+      propertyPath: m_Text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1699762882181490900, guid: f73b868874784d94c99bca5a7c18f769,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 576.57996
+      objectReference: {fileID: 0}
+    - target: {fileID: 1699762882181490900, guid: f73b868874784d94c99bca5a7c18f769,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -315
+      objectReference: {fileID: 0}
+    - target: {fileID: 1699762882370499114, guid: f73b868874784d94c99bca5a7c18f769,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 40.580048
+      objectReference: {fileID: 0}
+    - target: {fileID: 1699762882370499114, guid: f73b868874784d94c99bca5a7c18f769,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -315
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f73b868874784d94c99bca5a7c18f769, type: 3}
