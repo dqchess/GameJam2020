@@ -75,6 +75,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f797ecc3d3dab00449853d06941db998, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  generator: {fileID: 0}
   maxSearchRadius: 100
   searchRate: 8
   isRadarOn: 0
@@ -329,9 +330,9 @@ MonoBehaviour:
   movespeed: 30
   RotateSpeed: 60
   isForward: 1
-  isBackward: 1
-  isLeft: 1
-  isRight: 0
+  isBackward: 0
+  isLeft: 0
+  isRight: 1
 --- !u!82 &866745616
 AudioSource:
   m_ObjectHideFlags: 0
@@ -458,7 +459,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1174570892}
-  theDest: {fileID: 0}
 --- !u!1 &1943988188154583112
 GameObject:
   m_ObjectHideFlags: 0
