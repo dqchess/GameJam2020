@@ -10,6 +10,7 @@ public class PackingManager : MonoBehaviour
     [SerializeField] public Transform gridParent = null;
     [SerializeField] public Transform gridPosition = null;
     [SerializeField] public Transform blockPosition = null;
+    [SerializeField] public LineFactory lineFactory = null;
 
     public int cols = 0;
     public int rows = 0;
@@ -20,6 +21,9 @@ public class PackingManager : MonoBehaviour
 
     public Vector2 minBound = Vector2.zero;
     public Vector2 maxBound = Vector2.zero;
+
+    private float lineWidth = 0.02f;
+    private Color gridColor = Color.black;
 
     private void Awake()
     {
@@ -39,6 +43,7 @@ public class PackingManager : MonoBehaviour
         //    gamePiece.packingManager = this;
         //    gamePiece.OnSuccessfulPlace += OnPlace;
         //}
+        //lineFactory = GetComponent<LineFactory>();
     }
 
     // Start is called before the first frame update
@@ -85,12 +90,32 @@ public class PackingManager : MonoBehaviour
 
                 Tile newTile = newTileObject.GetComponent<Tile>();
                 newTile.id = id++;
-                newTile.canDrawBorder = true;
+                //newTile.canDrawBorder = true;
             }
         }
         
         minBound = (Vector2)gridPosition.position - halfGridOffset;
         maxBound = (Vector2)gridPosition.position + halfGridOffset;
+
+        Vector3 topLeft = transform.position - new Vector3(halfGridOffset.x, halfGridOffset.y, 0f) + new Vector3(positionOffset.x, positionOffset.y, 0f);
+
+        for (int i = 0; i <= rows; i++)
+        {
+            Vector3 a = new Vector3(topLeft.x,  topLeft.y + (i * tileSize), topLeft.z);
+
+            lineFactory.GetLine(a, a + (Vector3.right * totalWidth), lineWidth, gridColor);
+        }
+
+        for (int i = 0; i <= cols; i++)
+        {
+            Vector3 a = new Vector3(topLeft.x + (i * tileSize),  topLeft.y, topLeft.z);
+
+            lineFactory.GetLine(a, a + (Vector3.up * totalHeight), lineWidth, gridColor);
+        }
+
+        
+
+
     }
 
     private void OnPlace(GameObject go)
@@ -100,6 +125,12 @@ public class PackingManager : MonoBehaviour
         GamePiece piece = go.GetComponent<GamePiece>();
     }
 
+    private void OnRemove(GameObject go)
+    {
+        Debug.Log("removed: " + go.name);
+
+        GamePiece piece = go.GetComponent<GamePiece>();
+    }
 
     private void SpawnRandomAbility()
     {
@@ -108,10 +139,7 @@ public class PackingManager : MonoBehaviour
 
         AbilityID id = (AbilityID) rand;
         SpawnAbility(id);
-
-
     }
-
 
     public void SpawnAbility(AbilityID id)
     {
@@ -121,5 +149,6 @@ public class PackingManager : MonoBehaviour
         GamePiece gamePiece = newAbilityObject.GetComponent<GamePiece>();
         gamePiece.packingManager = this;
         gamePiece.OnSuccessfulPlace += OnPlace;
+        gamePiece.OnRemove += OnRemove;
     }
 }

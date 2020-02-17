@@ -15,37 +15,55 @@ MonoBehaviour:
   abilities:
   - id: 0
     block: {fileID: 8398277689061877459, guid: f555bd58b4e9d9c43a1bc4e67de18320, type: 3}
+    iAbility: {fileID: 11400000, guid: da1aa978f2db54a40b184b8114255407, type: 2}
   - id: 1
     block: {fileID: 8240416322417846611, guid: 2295ddb3e8f7653448fc534b225f21f8, type: 3}
+    iAbility: {fileID: 11400000, guid: 07cce4fb87864c2439a6137e9be9e5b1, type: 2}
   - id: 2
     block: {fileID: 7438301531748532943, guid: 83716f526591f0a41bdd7ebce640b6fc, type: 3}
+    iAbility: {fileID: 11400000, guid: 0a54669b92660994bb6bdee839e50b5a, type: 2}
   - id: 3
     block: {fileID: 7652612963375452085, guid: 3c063d2aa4a3bea41870b6e3c2b7bd0c, type: 3}
+    iAbility: {fileID: 11400000, guid: daaab4c9cc4285d46bf07e53f529bc76, type: 2}
   - id: 4
     block: {fileID: 9039781739723132370, guid: d0d0853447feba1458204b8da679f13e, type: 3}
+    iAbility: {fileID: 11400000, guid: d6bf996129c45af4da77b6c2ebac7f97, type: 2}
   - id: 5
     block: {fileID: 1034438615827727889, guid: 94689d54ff3f86642bd900fa446c77be, type: 3}
+    iAbility: {fileID: 11400000, guid: f18c93d4014d08b4090f488de0c76242, type: 2}
   - id: 6
     block: {fileID: 880311594744770043, guid: a66cd442e07196241ae45f70935aba4e, type: 3}
+    iAbility: {fileID: 11400000, guid: 834453863c8006446af95f6ac6eced1d, type: 2}
   - id: 7
     block: {fileID: 7013794210778019985, guid: 93c86f668a6942b49a9b9763d62594e4, type: 3}
+    iAbility: {fileID: 11400000, guid: 593ddbf76d95dd44e97a6f5cdbc0c315, type: 2}
   - id: 8
     block: {fileID: 2197829796153895017, guid: 85b53eb1105c0a149a30b6976d03acff, type: 3}
+    iAbility: {fileID: 11400000, guid: a85d7fe7dbb58b2489f9bafa15f15fb0, type: 2}
   - id: 9
     block: {fileID: 1795434462250031106, guid: 4fb6f813f8c5cc34f9c4915ecd343a5e, type: 3}
+    iAbility: {fileID: 11400000, guid: 1dcfc89bc947a3b41b2415274915dca5, type: 2}
   - id: 10
     block: {fileID: 5852410871970992632, guid: 9c8ef0ba1ea6c7f439db7c4eec53fd1b, type: 3}
+    iAbility: {fileID: 11400000, guid: 61405f815a45e0e4c9ca1204d6e4ff64, type: 2}
   - id: 11
     block: {fileID: 529055448706066203, guid: da3dd85dc8d29de44b73e19e095f2669, type: 3}
+    iAbility: {fileID: 11400000, guid: dbe08efaab53d7b408e60dd397e7ccbb, type: 2}
   - id: 12
     block: {fileID: 8881935955123481937, guid: 7a97836cf095359419b3f8ee77b4d2f2, type: 3}
+    iAbility: {fileID: 11400000, guid: 31873c1de16e2294f8ed271477f72bb9, type: 2}
   - id: 13
     block: {fileID: 7875659402705137556, guid: f810093e794a9854eb4e4d891687dceb, type: 3}
+    iAbility: {fileID: 11400000, guid: 2c5fa92bd2f0b074eb0d21302879061c, type: 2}
   - id: 14
     block: {fileID: 8966364369569820214, guid: 3c539b09f2ff7bf4aad8b64037d2f6de, type: 3}
+    iAbility: {fileID: 11400000, guid: a7adfcbe52407f84eb50f56e50816efd, type: 2}
   - id: 15
     block: {fileID: 2070182018853604237, guid: 79acbf5c7c252ec4bb217215fb79b511, type: 3}
+    iAbility: {fileID: 11400000, guid: abbc28f53c70ada498a5ea865ac14961, type: 2}
   - id: 16
     block: {fileID: 7277152240607816828, guid: b8b486015736f02429b9b4eb2c5bafbe, type: 3}
+    iAbility: {fileID: 11400000, guid: 1519c6fb106d771419de91b1118aa641, type: 2}
   - id: 17
     block: {fileID: 1384248438539271371, guid: 9b4008f16f57e0546acbab368a496518, type: 3}
+    iAbility: {fileID: 11400000, guid: 37a18ae0b54625b489253be45f83b3e5, type: 2}
